@@ -83,6 +83,7 @@ intercept =  12.972  -  70 * slope
 The line can be drawn by abline(intercept, slope, col = \"red\")
 
 ![](media/image6.png =200)
+<img src="media/image6.png" width = "400" height = "260" align=center>
 
 ### 3 Use the Pattern to Make Suggestion
 
