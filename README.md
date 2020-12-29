@@ -1,7 +1,7 @@
 # Head Shoulder Pattern Identification in R
 ## Identify head-shoulder pattern of S&P500
 
-### 1
+### 1 Find 5 Points for Head and Shoulder
 
 To identify a head-shoulder pattern, we should write a function to find
 extreme values. For this question, the function to find extreme max
@@ -20,7 +20,7 @@ instead of original data. In this problem, **the n for moving average is
 E3 is easy to obtain, because it is the biggest one. The result shows it
 is the 92-th value, which is 16.538.
 
-![](media/image1.png height="4")
+![](media/image1.png)
 
 Then, we use the function to find extreme min values. E2 and E4 are
 located on both sides of E3, so we should find them separately by
@@ -31,7 +31,7 @@ first filtration. And there are only 2 left after the second filtration:
 (11, 12.131), (70, 12.972). Obviously, (11, 12.131) is the first point,
 so it must not be E2, indicating (70, 12.972) is E2.
 
-![](media/image2.png height="12")
+![](media/image2.png height="6")
 
 In the range of time 92 to the end, there are 12 points left after the
 first filtration. And there are 4 left after the second filtration and 2
@@ -49,7 +49,7 @@ first filtration. And there are only 2 left after the second filtration:
 (40, 14.183), (92, 16.538). Since (92, 16.538) is E3, (40, 14.183) must
 be E1.
 
-![](media/image4.png height="12")
+![](media/image4.png =100x100)
 
 In the range of time 92 to the end, there are 12 points left after the
 first filtration. And there are 5 left after the second filtration and 3
@@ -58,7 +58,7 @@ left after the third filtration: (92, 16.538), (154, 14.611),
 (157, 14.611). Besides E3, there are 2 points with the same values. Both
 points can be E5, so we choose the first one (154, 14.611) as E5.
 
-![](media/image5.png height="12")
+![](media/image5.png =100)
 
 To identify HaS pattern, E1 and E5 must be within 1.5% of their average.
 So are E2 and E4.
@@ -71,7 +71,7 @@ For E2(70, 12.972) and E4(113, 13.176), their values should be within
 
 In conclusion, the HaS pattern with E1, E2, E3, E4, E5 can be confirmed.
 
-### 2
+### 2 Draw Neckline
 
 After that, the neckline can be computed by E2 and E4. Slope and
 intercept are available:
@@ -82,9 +82,9 @@ intercept =  12.972  -  70 * slope
 
 The line can be drawn by abline(intercept, slope, col = \"red\")
 
-![](media/image6.png height="12")
+![](media/image6.png =200)
 
-### 3
+### 3 Use the Pattern to Make Suggestion
 
 To identify the price objective, we need to calculate the distance
 between E3 and neckline. Then, figure out the first time that the price
