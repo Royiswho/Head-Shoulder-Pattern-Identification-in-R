@@ -20,7 +20,7 @@ instead of original data. In this problem, **the n for moving average is
 E3 is easy to obtain, because it is the biggest one. The result shows it
 is the 92-th value, which is 16.538.
 
-<img src="media/image1.png" width = "400">
+<img src="media/image1.png" width = "400" align=center>
 
 Then, we use the function to find extreme min values. E2 and E4 are
 located on both sides of E3, so we should find them separately by
@@ -31,7 +31,7 @@ first filtration. And there are only 2 left after the second filtration:
 (11, 12.131), (70, 12.972). Obviously, (11, 12.131) is the first point,
 so it must not be E2, indicating (70, 12.972) is E2.
 
-<img src="media/image2.png" width = "400">
+<img src="media/image2.png" width = "400" align=center>
 
 In the range of time 92 to the end, there are 12 points left after the
 first filtration. And there are 4 left after the second filtration and 2
@@ -39,7 +39,7 @@ left after the third filtration: (113, 13.176), (218, 10.474).
 Obviously, (218, 10.474) is too far away from E3, so it must not be E4,
 indicating (113, 13.176) is E4.
 
-<img src="media/image3.png" width = "400">
+<img src="media/image3.png" width = "400" align=center>
 
 Then, we use another function to find extreme max values. Also, we
 should find them separately by dividing the range by E3.
@@ -49,7 +49,7 @@ first filtration. And there are only 2 left after the second filtration:
 (40, 14.183), (92, 16.538). Since (92, 16.538) is E3, (40, 14.183) must
 be E1.
 
-<img src="media/image4.png" width = "400">
+<img src="media/image4.png" width = "400" align=center>
 
 In the range of time 92 to the end, there are 12 points left after the
 first filtration. And there are 5 left after the second filtration and 3
@@ -58,7 +58,7 @@ left after the third filtration: (92, 16.538), (154, 14.611),
 (157, 14.611). Besides E3, there are 2 points with the same values. Both
 points can be E5, so we choose the first one (154, 14.611) as E5.
 
-<img src="media/image5.png" width = "400">
+<img src="media/image5.png" width = "400" align=center>
 
 To identify HaS pattern, E1 and E5 must be within 1.5% of their average.
 So are E2 and E4.
@@ -82,7 +82,7 @@ intercept =  12.972  -  70 * slope
 
 The line can be drawn by abline(intercept, slope, col = \"red\")
 
-<img src="media/image6.png" width = "400">
+<img src="media/image6.png" width = "400" align=center>
 
 ### 3 Use the Pattern to Make Suggestion
 
