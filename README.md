@@ -1,7 +1,7 @@
 # Head Shoulder Pattern Identification in R
-## Identify head-shoulder pattern of S&P500
+## Identify head-shoulder pattern of Stock AA
 
-### 1 Find 5 Points for Head and Shoulder
+### 1. Find 5 Points for Head and Shoulder
 
 To identify a head-shoulder pattern, we should write a function to find
 extreme values. For this question, the function to find extreme max
@@ -71,7 +71,7 @@ For E2(70, 12.972) and E4(113, 13.176), their values should be within
 
 In conclusion, the HaS pattern with E1, E2, E3, E4, E5 can be confirmed.
 
-### 2 Draw Neckline
+### 2. Draw Neckline
 
 After that, the neckline can be computed by E2 and E4. Slope and
 intercept are available:
@@ -84,7 +84,7 @@ The line can be drawn by abline(intercept, slope, col = \"red\")
 
 <img src="media/image6.png" width = "400" align=center>
 
-### 3 Use the Pattern to Make Suggestion
+### 3. Use the Pattern to Make Suggestion
 
 To identify the price objective, we need to calculate the distance
 between E3 and neckline. Then, figure out the first time that the price
