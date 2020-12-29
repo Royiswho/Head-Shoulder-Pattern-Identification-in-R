@@ -1,7 +1,7 @@
 # Head Shoulder Pattern Identification in R
 ## Identify head-shoulder pattern of S&P500
 
-\(1\)
+###1
 
 To identify a head-shoulder pattern, we should write a function to find
 extreme values. For this question, the function to find extreme max
@@ -20,7 +20,7 @@ instead of original data. In this problem, **the n for moving average is
 E3 is easy to obtain, because it is the biggest one. The result shows it
 is the 92-th value, which is 16.538.
 
-![](media/image1.png =250x250)
+![](media/image1.png)
 
 Then, we use the function to find extreme min values. E2 and E4 are
 located on both sides of E3, so we should find them separately by
@@ -31,7 +31,7 @@ first filtration. And there are only 2 left after the second filtration:
 (11, 12.131), (70, 12.972). Obviously, (11, 12.131) is the first point,
 so it must not be E2, indicating (70, 12.972) is E2.
 
-![](media/image2.png | width=100)
+![](media/image2.png height="24")
 
 In the range of time 92 to the end, there are 12 points left after the
 first filtration. And there are 4 left after the second filtration and 2
@@ -71,33 +71,33 @@ For E2(70, 12.972) and E4(113, 13.176), their values should be within
 
 In conclusion, the HaS pattern with E1, E2, E3, E4, E5 can be confirmed.
 
-\(2\)
+###2
 
 After that, the neckline can be computed by E2 and E4. Slope and
 intercept are available:
 
-$$slope = (12.972  - 13.176) /(70  - 113)$$
+slope = (12.972  - 13.176) /(70  - 113)
 
-$$intercept =  12.972  -  70 * slope$$
+intercept =  12.972  -  70 * slope
 
 The line can be drawn by abline(intercept, slope, col = \"red\")
 
 ![](media/image6.png | width=100)
 
-\(3\)
+###3
 
 To identify the price objective, we need to calculate the distance
 between E3 and neckline. Then, figure out the first time that the price
 drops below the neckline.
 
 The neckline can be defined as:
-$NkValue = \ slope\ *\ x\  + \ intercept$, hence, the distance can be
-obtained: $distance = 16.538 - (slope\ *\ 92\  + \ intercept) = 3.46$.
+NkValue =  slope * x  +  intercept, hence, the distance can be
+obtained: distance = 16.538 - (slope * 92  +  intercept) = 3.46.
 
 The first time that the price drops below the neckline is
 171(**2010-05-05**), so it is the time to sell the stock.
 
 Also, the price objective can be calculated:
-$slope\ *\ 171\  + \ intercept - \ distance = 9.99$. **Assume that we
+slope * 171  +  intercept -  distance = 9.99. **Assume that we
 don't know what will happen after 171(2010-05-05), we should sell at
 that time and close position when the price drops to 9.99.**
