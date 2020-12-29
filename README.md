@@ -1,7 +1,7 @@
 # Head Shoulder Pattern Identification in R
 ## Identify head-shoulder pattern of S&P500
 
-###1
+### 1
 
 To identify a head-shoulder pattern, we should write a function to find
 extreme values. For this question, the function to find extreme max
@@ -31,7 +31,7 @@ first filtration. And there are only 2 left after the second filtration:
 (11, 12.131), (70, 12.972). Obviously, (11, 12.131) is the first point,
 so it must not be E2, indicating (70, 12.972) is E2.
 
-![](media/image2.png height="24")
+![](media/image2.png height="12")
 
 In the range of time 92 to the end, there are 12 points left after the
 first filtration. And there are 4 left after the second filtration and 2
@@ -71,7 +71,7 @@ For E2(70, 12.972) and E4(113, 13.176), their values should be within
 
 In conclusion, the HaS pattern with E1, E2, E3, E4, E5 can be confirmed.
 
-###2
+### 2
 
 After that, the neckline can be computed by E2 and E4. Slope and
 intercept are available:
@@ -84,7 +84,7 @@ The line can be drawn by abline(intercept, slope, col = \"red\")
 
 ![](media/image6.png | width=100)
 
-###3
+### 3
 
 To identify the price objective, we need to calculate the distance
 between E3 and neckline. Then, figure out the first time that the price
