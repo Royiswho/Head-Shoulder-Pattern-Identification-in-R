@@ -20,7 +20,7 @@ instead of original data. In this problem, **the n for moving average is
 E3 is easy to obtain, because it is the biggest one. The result shows it
 is the 92-th value, which is 16.538.
 
-<img src="media/image1.png" width = "400" align=center>
+<img src="media/image1.png" width = "400" align="center">
 
 Then, we use the function to find extreme min values. E2 and E4 are
 located on both sides of E3, so we should find them separately by
