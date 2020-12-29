@@ -7,7 +7,7 @@ library(xts)
 library(quantmod)
 library(TTR)
 
-Data <- read.csv(file = "SP500.csv")
+Data <- read.csv(file = "AA.csv")
 AA <- subset(Data, Ticker == "AA") 
 AAts <- data.frame(Price = AA[, "Close"])
 AAmv <- runMean(AAts, n = 10)
